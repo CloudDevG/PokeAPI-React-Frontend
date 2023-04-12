@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../security/AuthContext';
 import { retrieveAllPokemonFromPokedex } from "../../api/PokemonApiService";
 import PokeBallImg from '../../assets/imgs/pokeball-icon.png';
 
 function Dashboard() {
-
-    const authContext = useAuth();
-
-    const navigate = useNavigate();
 
     const [pokemonSpecies, setPokemonSpecies] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -16,9 +10,9 @@ function Dashboard() {
     const [message, setMessage] = useState(null)
 
 
-    useEffect(() => refreshTodos(), [])
+    useEffect(() => refreshPokedex(), [])
 
-    function refreshTodos() {
+    function refreshPokedex() {
         setLoading(true);
 
         retrieveAllPokemonFromPokedex()
@@ -29,7 +23,6 @@ function Dashboard() {
             .catch(error => {
                 setMessage(error);
             })
-
     }
 
     return (
@@ -53,8 +46,8 @@ function Dashboard() {
                             <tbody>
                                 {
                                     pokemonSpecies.map(
-                                        (species, i) => (
-                                            <tr key={i}>
+                                        (species) => (
+                                            <tr key={species.orderId}>
                                                 <td>{species.orderId.toString()}</td>
                                                 <td>{species.name}</td>
                                                 <td>{species.color}</td>
@@ -63,18 +56,17 @@ function Dashboard() {
                                     )
                                 }
                             </tbody>
-
                         </table>
                     </div>
                 </div>
             ) : (
-                <img src={PokeBallImg} className="pokeball-spinner" alt="Pokeball" />
-
+                <>
+                    <h1>Loading Pokedex.....</h1>
+                    <h3 style={{ marginBottom: "5px" }}>(this might take a few secs)</h3>
+                    <img src={PokeBallImg} className="pokeball-spinner" alt="Pokeball" />
+                </>
             )}
         </div>
-
-
-
     )
 }
 
