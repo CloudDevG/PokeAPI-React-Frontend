@@ -5,10 +5,9 @@ import PokeBallImg from '../../assets/imgs/pokeball-icon.png';
 function Dashboard() {
 
     const [pokemonSpecies, setPokemonSpecies] = useState([]);
+    const [selectedColor, setSelectedColor] = useState([]);
     const [loading, setLoading] = useState(false);
-
     const [message, setMessage] = useState(null)
-
 
     useEffect(() => refreshPokedex(), [])
 
@@ -22,19 +21,40 @@ function Dashboard() {
             })
             .catch(error => {
                 setMessage(error);
+                setLoading(false);
             })
     }
+
+    const handleSelectChange = (e) => {
+        if (e.target.value !== "all") {
+            setSelectedColor(e.target.value);
+        } else {
+            setSelectedColor([]);
+        }
+    };
 
     return (
         <div>
             {!loading ? (
                 <div className="container">
                     <h1>PokeDex - Gen #1</h1>
-
                     {message && <div className="alert alert-warning">{message}</div>}
 
-
                     <div>
+                        <label for="colors">Color Selection:</label>
+                        <select onChange={handleSelectChange} name="colors" id="colors">
+                            <option value="all">All</option>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="brown">Brown</option>
+                            <option value="gray">Gray</option>
+                            <option value="green">Green</option>
+                            <option value="pink">Pink</option>
+                            <option value="purple">Purple</option>
+                            <option value="red">Red</option>
+                            <option value="white">White</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
                         <table className="table">
                             <thead>
                                 <tr>
@@ -44,8 +64,16 @@ function Dashboard() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {
-                                    pokemonSpecies.map(
+                                {pokemonSpecies.filter((pokemon) => {
+                                    if (selectedColor.length === 0) {
+                                        return pokemonSpecies
+                                    } else {
+                                        return pokemon.color === selectedColor;
+                                    }
+
+                                })
+
+                                    .map(
                                         (species) => (
                                             <tr key={species.orderId}>
                                                 <td>{species.orderId.toString()}</td>
@@ -62,7 +90,7 @@ function Dashboard() {
             ) : (
                 <>
                     <h1>Loading Pokedex.....</h1>
-                    <h3 style={{ marginBottom: "5px" }}>(this might take a few secs)</h3>
+                    <h3 style={{ marginBottom: "10px" }}>(this will take just a few moments)</h3>
                     <img src={PokeBallImg} className="pokeball-spinner" alt="Pokeball" />
                 </>
             )}
