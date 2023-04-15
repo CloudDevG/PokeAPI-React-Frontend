@@ -8,7 +8,7 @@ function Footer() {
 
     return (
         <footer className="bg-info text-center text-lg-start fixed-bottom">
-            <div className="text-center p-3" style={{ backgroundColor: '#3B4CCA', color: '#FFDE00' }}>
+            <div className="text-center p-3" style={{ backgroundColor: '#3B4CCA', color: '#FFDE00', fontWeight: '400' }}>
                 © 2023 - Kennected Pokedex
             </div>
         </footer>

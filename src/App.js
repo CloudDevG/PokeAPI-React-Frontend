@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import "@fontsource/lato";
 import Navbar from './components/Layout/Navbar';
 import Login from './components/Login/Login';
 import Footer from './components/Layout/Footer';

@@ -1,14 +1,16 @@
 .App {
-  text-align: center;
-  /* background-color: #f0f0f0; */
   font-size: 20px;
 }
 
-label,
+/* label,
 input,
 button {
   margin: 10px;
   padding: 5px;
+} */
+
+h1 {
+  text-align: center;
 }
 
 .kennected-nav-icon {
@@ -17,14 +19,30 @@ button {
   margin-right: 25px;
 }
 
+.login {
+  padding: 0% 25%;
+}
+
+h1,
+.login-title-txt,
+.pokemon-color-select,
+.pokeball-spinner-container {
+  text-align: center;
+}
+
 .pokemon-text-logo {
   width: 282px;
   height: 104px;
   margin-bottom: 5px;
 }
 
+.navbar-toggler {
+  background-color: white;
+}
+
 .nav-button-text {
-  color: black
+  /* color: blue; */
+  /* font-weight: 500; */
 }
 
 .pokeball-spinner {
@@ -41,6 +59,10 @@ button {
   /* transform: rotate(.03turn);  */
 }
 
+.dashboard {
+  height: 100%;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -48,5 +70,21 @@ button {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .pokemon-text-logo {
+    width: 212px;
+    height: 78px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pokemon-text-logo {
+    width: 282px;
+    height: 104px;
+    margin-bottom: 5px;
   }
 }
