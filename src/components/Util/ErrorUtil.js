@@ -1,9 +1,9 @@
 function Error() {
     return (
         <div className="Error">
-            <h1>We are working really hard!</h1>
+            <h1>Error (Code 404)</h1>
             <div>
-                Apologies for the 404. Reach out to our team at ABC-DEF-GHIJ.
+                We apologize for the issue :(
             </div>
         </div>
     )

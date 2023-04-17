@@ -10,7 +10,6 @@ import AuthProvider, { useAuth } from './security/AuthContext';
 import './App.css';
 
 
-
 function AuthenticatedRoute({ children }) {
   const authContext = useAuth();
 
@@ -29,24 +28,20 @@ function App() {
           <Routes>
             <Route path='/' element={<Login />} />
             <Route path='/login' element={<Login />} />
-
             <Route path='/dashboard' element={
               <AuthenticatedRoute>
                 <Dashboard />
               </AuthenticatedRoute>
             } />
-
             <Route path='/logout' element={
               <AuthenticatedRoute>
                 <Logout />
               </AuthenticatedRoute>
             } />
-
             <Route path='*' element={<Error />} />
-
           </Routes>
+          <Footer />
         </BrowserRouter>
-        <Footer />
       </AuthProvider>
     </div>
   );

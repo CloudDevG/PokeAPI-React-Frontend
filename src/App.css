@@ -2,32 +2,58 @@
   font-size: 20px;
 }
 
-/* label,
-input,
-button {
-  margin: 10px;
-  padding: 5px;
-} */
-
-h1 {
+h1,
+.card-header,
+.card-title,
+.login-title-txt,
+.pokemon-color-select,
+.pokeball-spinner-container,
+.errorMessage {
   text-align: center;
+}
+
+.card {
+  height: auto;
+  margin: 50px;
+
+}
+
+.card-footer {
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header {
+  font-size: larger;
+}
+
+.dashboard {
+  height: 100%;
+}
+
+.errorMessage {
+  color: red;
 }
 
 .kennected-nav-icon {
   width: 88.5px;
   height: 98.5px;
-  margin-right: 25px;
+  margin-bottom: 7.5px;
 }
 
-.login {
-  padding: 0% 25%;
+.nav-button-text {
+  color: white;
+  color: #FFDE00;
+  font-weight: '100';
 }
 
-h1,
-.login-title-txt,
-.pokemon-color-select,
-.pokeball-spinner-container {
-  text-align: center;
+.navbar-toggler {
+  background-color: white;
+  margin-right: 10px;
+}
+
+.pokemon-color-select {
+  display: inline-block;
 }
 
 .pokemon-text-logo {
@@ -36,19 +62,9 @@ h1,
   margin-bottom: 5px;
 }
 
-.navbar-toggler {
-  background-color: white;
-}
-
-.nav-button-text {
-  /* color: blue; */
-  /* font-weight: 500; */
-}
-
 .pokeball-spinner {
   width: 200px;
   height: 200px;
-  /* background-color: #0CB1C4; */
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
@@ -57,10 +73,6 @@ h1,
   /* transform: rotate(0.3rad);/ */
   /* transform: rotate(3grad); */
   /* transform: rotate(.03turn);  */
-}
-
-.dashboard {
-  height: 100%;
 }
 
 @keyframes spin {
@@ -74,10 +86,21 @@ h1,
 }
 
 @media screen and (max-width: 750px) {
+  .card {
+    margin: 20px;
+  }
+
   .pokemon-text-logo {
     width: 212px;
     height: 78px;
     margin-bottom: 5px;
+  }
+
+  .kennected-nav-icon {
+    width: 66.275px;
+    height: 73.875px;
+    margin-right: auto;
+    /* margin-bottom: 7.5px; */
   }
 }
 
@@ -85,6 +108,14 @@ h1,
   .pokemon-text-logo {
     width: 282px;
     height: 104px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .pokemon-text-logo {
+    width: 158.625px;
+    height: 58.5px;
     margin-bottom: 5px;
   }
 }

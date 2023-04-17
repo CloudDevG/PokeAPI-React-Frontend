@@ -1,16 +1,13 @@
 body {
-  /* padding: 20px; */
   margin: 10px;
   font-family: "Lato";
-  /* -webkit-font-smoothing: antialiased; */
-  /* -moz-osx-font-smoothing: grayscale; */
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./assets/imgs/kennectedpokedex-main-background.jpg);
 }
 
 #root {
   height: 100%;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
