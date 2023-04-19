@@ -79,8 +79,8 @@ function Dashboard() {
                                         }).map((species) => (
                                             <tr key={species.orderId}>
                                                 <td>{species.orderId.toString()}</td>
-                                                <td>{species.name}</td>
-                                                <td>{species.color}</td>
+                                                <td>{species.name[0].toUpperCase() + species.name.substring(1)}</td>
+                                                <td>{species.color[0].toUpperCase() + species.color.substring(1)}</td>
                                             </tr>
                                         ))}
                                     </tbody>
