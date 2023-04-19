@@ -54,7 +54,7 @@ function Login() {
                 </div>
             </div>
             <div className="card-footer">
-                <div class="row h-100 justify-content-center align-items-center">
+                <div className="row h-100 justify-content-center align-items-center">
                     <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
                 </div>
             </div>

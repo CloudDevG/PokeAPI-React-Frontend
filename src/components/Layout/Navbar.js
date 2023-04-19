@@ -16,7 +16,7 @@ function Navbar() {
             <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#FF0000" }}>
                 <div className='container-fluid'>
                     <div className='nav-item'>
-                        <button className="navbar-toggler" style={{ backgroundColor: 'white' }} type="button" data-bs-toggle="collapse" data-bs-target="#pokedexNavbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <button className="navbar-toggler" style={{ backgroundColor: 'white' }} type="button" data-bs-toggle="collapse" data-bs-target="#pokedexNavbarToggler" aria-controls="pokedexNavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <a className="navbar-brand" href="/">

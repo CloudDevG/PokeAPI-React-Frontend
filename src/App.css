@@ -5,6 +5,7 @@
 h1,
 .card-header,
 .card-title,
+.card-text,
 .login-title-txt,
 .pokemon-color-select,
 .pokeball-spinner-container,
@@ -15,7 +16,6 @@ h1,
 .card {
   height: auto;
   margin: 50px;
-
 }
 
 .card-footer {
@@ -42,7 +42,6 @@ h1,
 }
 
 .nav-button-text {
-  color: white;
   color: #FFDE00;
   font-weight: '100';
 }
@@ -50,6 +49,15 @@ h1,
 .navbar-toggler {
   background-color: white;
   margin-right: 10px;
+}
+
+.pokedex-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #3B4CCA;
+  color: #FFDE00;
+  font-weight: 200;
+  border-top: 4px solid #FFDE00;
 }
 
 .pokemon-color-select {
@@ -60,6 +68,10 @@ h1,
   width: 282px;
   height: 104px;
   margin-bottom: 5px;
+}
+
+.table {
+  margin-bottom: 25px;
 }
 
 .pokeball-spinner {
@@ -100,7 +112,6 @@ h1,
     width: 66.275px;
     height: 73.875px;
     margin-right: auto;
-    /* margin-bottom: 7.5px; */
   }
 }
 
@@ -116,6 +127,5 @@ h1,
   .pokemon-text-logo {
     width: 158.625px;
     height: 58.5px;
-    margin-bottom: 5px;
   }
 }
