@@ -4,7 +4,7 @@ import Navbar from './components/Layout/Navbar';
 import Login from './components/Login/Login';
 import Footer from './components/Layout/Footer';
 import Logout from './components/Util/Logout';
-import Error from './components/Util/ErrorUtil';
+import ErrorUtil from './components/Util/ErrorUtil';
 import Dashboard from './components/Dashboard/Dashboard';
 import AuthProvider, { useAuth } from './security/AuthContext';
 import './App.css';
@@ -38,7 +38,7 @@ function App() {
                 <Logout />
               </AuthenticatedRoute>
             } />
-            <Route path='*' element={<Error />} />
+            <Route path='*' element={<ErrorUtil />} />
           </Routes>
           <Footer />
         </BrowserRouter>
