@@ -19,7 +19,7 @@ function Dashboard() {
                 setLoading(false);
             })
             .catch(error => {
-                setMessage(error);
+                setMessage(error.message);
                 setLoading(false);
             })
     };
