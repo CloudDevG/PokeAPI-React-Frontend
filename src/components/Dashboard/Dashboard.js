@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { retrieveAllPokemonFromPokedex } from "../../api/PokemonApiService";
+import { retrieveAllPokemonFromPokedexByGeneration } from "../../api/PokemonApiService";
 import PokeBallImg from '../../assets/imgs/pokeball-icon.png';
 
 function Dashboard() {
@@ -8,12 +8,12 @@ function Dashboard() {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState(null);
 
-    useEffect(() => refreshPokedex(), [])
+    useEffect(() => refreshPokedex(), []);
 
     function refreshPokedex() {
         setLoading(true);
 
-        retrieveAllPokemonFromPokedex()
+        retrieveAllPokemonFromPokedexByGeneration(1)
             .then(response => {
                 setPokemonSpecies(response.data);
                 setLoading(false);
@@ -22,7 +22,7 @@ function Dashboard() {
                 setMessage(error);
                 setLoading(false);
             })
-    }
+    };
 
     const handleSelectColorChange = (e) => {
         if (e.target.value !== "all") {
