@@ -36,7 +36,6 @@ function Dashboard() {
         <div className="dashboard">
             {!loading ? (
                 <div className="container">
-
                     <div className="card">
                         <div className="card-header">
                             Kennected Pokedex

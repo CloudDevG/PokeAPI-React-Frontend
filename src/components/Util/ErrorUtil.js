@@ -5,8 +5,6 @@ function ErrorUtil() {
 
     return (
         <div className="error">
-
-
             <div className="card">
                 <div className="card-header">
                     Kennected Pokedex
@@ -21,7 +19,6 @@ function ErrorUtil() {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
