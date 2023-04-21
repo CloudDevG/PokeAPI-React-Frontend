@@ -117,15 +117,8 @@ h1,
 
 @media screen and (max-width: 400px) {
   .pokemon-text-logo {
-    width: 282px;
-    height: 104px;
-    margin-bottom: 5px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .pokemon-text-logo {
     width: 158.625px;
     height: 58.5px;
+    margin-bottom: 5px;
   }
 }
